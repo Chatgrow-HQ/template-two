@@ -2,7 +2,7 @@ import "./site.css";
 import { urbanist } from "@/lib/font";
 
 export const metadata = {
-  title: "Northstar Immigration | Clear pathways forward",
+  title: "Sky Immigration | Clear pathways forward",
   description: "A contemporary immigration consultancy website template.",
 };
 

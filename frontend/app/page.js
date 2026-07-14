@@ -21,7 +21,7 @@ export default function Home() {
             <span className="ns-label">Immigration advice, made human</span>
             <h1>A clearer route to your <span>next chapter.</span></h1>
             <p>Dummy consultancy copy for a trusted team helping individuals, families, students, and professionals navigate immigration decisions with less uncertainty.</p>
-            <div className="ns-actions"><Link href="/contact" className="ns-button ns-button--red">Check your options <span>→</span></Link><Link href="/visa" className="ns-button ns-button--light">Explore pathways</Link></div>
+            <div className="ns-actions"><Link href="/contact" className="ns-button ns-button--blue">Check your options <span>→</span></Link><Link href="/visa" className="ns-button ns-button--light">Explore pathways</Link></div>
           </div>
           <img className="ns-hero__image" src="/assets/images/immigration/consultation.jpg" alt="Couple discussing their immigration options with an adviser" />
         </div>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="ns-testimonials"><article className="ns-quote"><blockquote>“The process stopped feeling overwhelming once every document had a clear purpose and deadline.”</blockquote><strong>Ada &amp; Tunde</strong><span>Family application</span></article><article className="ns-quote"><blockquote>“I appreciated the honest explanation of my options. There was no pressure and no unrealistic promise.”</blockquote><strong>Kelechi M.</strong><span>Study pathway</span></article><article className="ns-quote"><blockquote>“The final review caught details I would have missed and gave me much more confidence before submission.”</blockquote><strong>Michael O.</strong><span>Work permit application</span></article></div>
       </div></section>
 
-      <section className="ns-section"><div className="ns-container"><div className="ns-cta"><div><h2>Your immigration plan deserves a clear first step.</h2><p>Book a confidential consultation and leave with a better understanding of your available options.</p></div><Link href="/contact" className="ns-button ns-button--red">Book a consultation →</Link></div></div></section>
+      <section className="ns-section"><div className="ns-container"><div className="ns-cta"><div><h2>Your immigration plan deserves a clear first step.</h2><p>Book a confidential consultation and leave with a better understanding of your available options.</p></div><Link href="/contact" className="ns-button ns-button--blue">Book a consultation →</Link></div></div></section>
     </SiteShell>
   );
 }

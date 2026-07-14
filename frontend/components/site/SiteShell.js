@@ -10,7 +10,7 @@ const navigation = [
 ];
 
 export function SiteBrand() {
-  return <Link href="/" className="ns-brand" aria-label="Northstar Immigration home"><span className="ns-brand__mark">N</span><span>Northstar<small>IMMIGRATION</small></span></Link>;
+  return <Link href="/" className="ns-brand" aria-label="Sky Immigration home"><span className="ns-brand__mark">S</span><span>Sky<small>IMMIGRATION</small></span></Link>;
 }
 
 export default function SiteShell({ children }) {
@@ -32,7 +32,7 @@ export default function SiteShell({ children }) {
           <div><h3>Pathways</h3><Link href="/visa">Work permits</Link><Link href="/visa">Study permits</Link><Link href="/visa">Family sponsorship</Link></div>
           <div><h3>Start here</h3><p>12 Example Avenue<br/>Lagos, Nigeria</p><a href="mailto:hello@example.com">hello@example.com</a><a href="tel:+2348000000000">+234 800 000 0000</a></div>
         </div>
-        <div className="ns-footer__bottom"><div className="ns-container">© {new Date().getFullYear()} Northstar Immigration. Template content for demonstration.</div></div>
+        <div className="ns-footer__bottom"><div className="ns-container">© {new Date().getFullYear()} Sky Immigration. Template content for demonstration.</div></div>
       </footer>
     </div>
   );
