@@ -1,38 +1,29 @@
 import Link from "next/link";
 
-const navigation = [
-  ["Home", "/"],
-  ["About", "/about-us"],
-  ["Visa Services", "/visa"],
-  ["Countries", "/countries"],
-  ["Insights", "/blog"],
-  ["Contact", "/contact"],
-];
+const navigation = [["Services", "#services"], ["About", "#about"], ["Process", "#process"]];
 
 export function SiteBrand() {
-  return <Link href="/" className="ns-brand" aria-label="Sky Immigration home"><span className="ns-brand__mark">S</span><span>Sky<small>IMMIGRATION</small></span></Link>;
+  return <Link href="#home" className="imm-brand" aria-label="Skyways home"><img className="imm-brand__logo" src="/skyways-logo.png" alt="Skyways Travels and Tours" /></Link>;
 }
 
 export default function SiteShell({ children }) {
   return (
-    <div className="ns-site">
-      <header className="ns-header">
-        <div className="ns-container ns-header__inner">
+    <div className="imm-site">
+      <header className="imm-header">
+        <div className="imm-container imm-header__inner">
           <SiteBrand />
-          <nav className="ns-nav" aria-label="Primary navigation">{navigation.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav>
-          <Link href="/contact" className="ns-button ns-header__cta">Book a consultation</Link>
-          <details className="ns-mobile-menu"><summary aria-label="Open navigation"><span></span><span></span><span></span></summary><nav>{navigation.map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}</nav></details>
+          <nav className="imm-nav" aria-label="Primary navigation">{navigation.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</nav>
+          <a href="#assessment" className="imm-button imm-header__cta">Start Assessment</a>
         </div>
       </header>
       <main>{children}</main>
-      <footer className="ns-footer">
-        <div className="ns-container ns-footer__grid">
-          <div><SiteBrand /><p>Practical immigration guidance for people building a new chapter abroad.</p></div>
-          <div><h3>Company</h3><Link href="/about-us">About us</Link><Link href="/blog">Insights</Link><Link href="/contact">Contact</Link></div>
-          <div><h3>Pathways</h3><Link href="/visa">Work permits</Link><Link href="/visa">Study permits</Link><Link href="/visa">Family sponsorship</Link></div>
-          <div><h3>Start here</h3><p>12 Example Avenue<br/>Lagos, Nigeria</p><a href="mailto:hello@example.com">hello@example.com</a><a href="tel:+2348000000000">+234 800 000 0000</a></div>
+      <footer className="imm-footer">
+        <div className="imm-container imm-footer__inner">
+          <div><SiteBrand /><p>Clear, human guidance for people considering a new chapter in Canada.</p></div>
+          <div><strong>Explore</strong>{navigation.map(([label, href]) => <a href={href} key={href}>{label}</a>)}</div>
+          <div><strong>Important</strong><p>Website information is general and does not constitute legal or immigration advice. Assessment results do not guarantee approval.</p></div>
         </div>
-        <div className="ns-footer__bottom"><div className="ns-container">© {new Date().getFullYear()} Sky Immigration. Template content for demonstration.</div></div>
+        <div className="imm-container imm-footer__bottom">© {new Date().getFullYear()} Sky Immigration. All rights reserved.</div>
       </footer>
     </div>
   );

@@ -1,76 +1,124 @@
-import Link from "next/link";
 import SiteShell from "@/components/site/SiteShell";
 
-const pathways = [
-  ["01", "Study permits", "Guidance for students choosing programmes, preparing documents, and planning the next step after admission."],
-  ["02", "Skilled migration", "A structured review of work history, qualifications, language results, and eligible economic pathways."],
-  ["03", "Family sponsorship", "Clear support for couples and families preparing relationship evidence and complete applications."],
-  ["04", "Work permits", "Practical guidance for employer-supported applications, open permits, and accompanying family members."],
-  ["05", "Visitor visas", "Well-organised temporary residence applications with a clear purpose of travel and supporting evidence."],
-  ["06", "Application review", "A second set of experienced eyes before you submit, with gaps and inconsistencies clearly identified."],
+const services = [
+  {
+    number: "01",
+    title: "Permanent residence",
+    copy: "Explore federal and provincial pathways based on your experience, education, language profile, and long-term goals.",
+  },
+  {
+    number: "02",
+    title: "Study permits",
+    copy: "Get clear guidance on programme selection, admission documents, study permit requirements, and the journey ahead.",
+  },
+  {
+    number: "03",
+    title: "Work permits",
+    copy: "Understand employer-supported and open work permit options, supporting evidence, and the steps that apply to you.",
+  },
+  {
+    number: "04",
+    title: "Family sponsorship",
+    copy: "Prepare a well-organised application to reunite with a spouse, partner, child, parent, or other eligible relative.",
+  },
+  {
+    number: "05",
+    title: "Visit Canada",
+    copy: "Build a temporary residence application with a clear travel purpose, financial evidence, and strong home-country ties.",
+  },
+  {
+    number: "06",
+    title: "Reviews & refusals",
+    copy: "Identify gaps, respond to document requests, and better understand the options available after a refusal or fairness letter.",
+  },
 ];
 
-const steps = [["01","Tell us your goal"],["02","Understand your options"],["03","Prepare with clarity"],["04","Submit with confidence"]];
+const steps = [
+  ["01", "Start your assessment", "Tell us about your background, current situation, and what you hope to achieve in Canada."],
+  ["02", "Understand your options", "Your information is reviewed against the pathways that may be relevant to your circumstances."],
+  ["03", "Move forward clearly", "Receive practical next steps, document guidance, and a more organised route forward."],
+];
 
 export default function Home() {
   return (
     <SiteShell>
-      <section className="ns-hero">
-        <div className="ns-container ns-hero__grid">
-          <div className="ns-hero__content">
-            <span className="ns-label">Immigration advice, made human</span>
-            <h1>A clearer route to your <span>next chapter.</span></h1>
-            <p>Dummy consultancy copy for a trusted team helping individuals, families, students, and professionals navigate immigration decisions with less uncertainty.</p>
-            <div className="ns-actions"><Link href="/contact" className="ns-button ns-button--blue">Check your options <span>→</span></Link><Link href="/visa" className="ns-button ns-button--light">Explore pathways</Link></div>
+      <section className="imm-hero" id="home">
+        <div className="imm-container imm-hero__grid">
+          <div className="imm-hero__copy">
+            <span className="imm-eyebrow">Canadian immigration guidance</span>
+            <h1>A clearer path to your life in <em>Canada.</em></h1>
+            <p>
+              Understand your options for living, studying, working, visiting,
+              or reuniting with family—with guidance designed around your real
+              circumstances.
+            </p>
+            <a className="imm-button" href="#assessment">Start Assessment <span aria-hidden="true">↗</span></a>
+            <div className="imm-hero__note"><span>Clear options</span><span>Personal guidance</span><span>Practical next steps</span></div>
           </div>
-          <img className="ns-hero__image" src="/assets/images/immigration/consultation.jpg" alt="Couple discussing their immigration options with an adviser" />
+          <div className="imm-hero__visual">
+            <img src="/assets/images/immigration/consultation.jpg" alt="An immigration adviser speaking with a couple" />
+            <div className="imm-hero__caption"><strong>Your journey is personal.</strong><span>Your guidance should be too.</span></div>
+          </div>
         </div>
       </section>
 
-      <section className="ns-assessment" aria-label="Quick eligibility assessment">
-        <form className="ns-container"><div className="ns-assessment__inner">
-          <div className="ns-assessment__intro"><h2>Start with a quick assessment</h2><p>Share a few details and we will point you in the right direction.</p></div>
-          <div className="ns-field"><label htmlFor="destination">Destination</label><select id="destination" defaultValue=""><option value="" disabled>Select a country</option><option>Canada</option><option>United Kingdom</option><option>Australia</option></select></div>
-          <div className="ns-field"><label htmlFor="pathway">Pathway</label><select id="pathway" defaultValue=""><option value="" disabled>What is your goal?</option><option>Study</option><option>Work</option><option>Join family</option></select></div>
-          <div className="ns-field"><label htmlFor="email">Email</label><input id="email" type="email" placeholder="you@example.com" /></div>
-          <button className="ns-button" type="submit">Get started</button>
-        </div></form>
+      <section className="imm-services" id="services">
+        <div className="imm-container">
+          <div className="imm-heading">
+            <div><span className="imm-eyebrow">How we can help</span><h2>Canada pathways made easier to understand.</h2></div>
+            <p>Immigration can feel complicated. We help you focus on the pathway, documents, and decisions that matter for your case.</p>
+          </div>
+          <div className="imm-service-grid">
+            {services.map((service) => (
+              <article className="imm-service" key={service.title}>
+                <span>{service.number}</span>
+                <h3>{service.title}</h3>
+                <p>{service.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
-      <section className="ns-section"><div className="ns-container">
-        <div className="ns-trust"><div><strong>10+ years</strong><span>Combined advisory experience</span></div><div><strong>6 pathways</strong><span>For study, work, and family goals</span></div><div><strong>20+ countries</strong><span>Clients supported worldwide</span></div><div><strong>1:1 support</strong><span>A real person throughout the process</span></div></div>
-      </div></section>
-
-      <section className="ns-section ns-section--soft"><div className="ns-container">
-        <div className="ns-section-head"><div><span className="ns-label">How we can help</span><h2>Immigration pathways explained without the noise.</h2></div><p>Every case starts with your circumstances—not a generic checklist. These placeholder services can be replaced with the firm&apos;s real areas of practice.</p></div>
-        <div className="ns-card-grid">{pathways.map(([number,title,copy]) => <article className="ns-card" key={title}><span className="ns-card__number">{number}</span><h3>{title}</h3><p>{copy}</p><Link href="/visa" className="ns-text-link">Learn about this pathway →</Link></article>)}</div>
-      </div></section>
-
-      <section className="ns-section"><div className="ns-container ns-split">
-        <img src="/assets/images/immigration/family-arrival.jpg" alt="Family settling into a new city after relocating" />
-        <div><span className="ns-label">Advice built around real lives</span><h2>More than paperwork. A plan for what comes next.</h2><p>Immigration decisions affect careers, education, finances, and family life. Our dummy consultancy model combines careful application preparation with practical conversations about timing, risks, and realistic next steps.</p><div className="ns-checks"><span>Clear written recommendations</span><span>Document-by-document guidance</span><span>Honest timelines and expectations</span><span>Consistent case updates</span></div><Link href="/about-us" className="ns-button">Why clients choose us</Link></div>
-      </div></section>
-
-      <section className="ns-section ns-section--cream"><div className="ns-container">
-        <div className="ns-section-head"><div><span className="ns-label">A simple process</span><h2>Know what happens at every stage.</h2></div></div>
-        <div className="ns-process">{steps.map(([number,title],index) => <div className="ns-step" key={title}><span>{number}</span><h3>{title}</h3><p>{["Tell us where you are now and what you hope to achieve.","Receive a practical pathway review based on the information provided.","Work through a clear evidence plan with organised support.","Complete a final review and understand what follows after submission."][index]}</p></div>)}</div>
-      </div></section>
-
-      <section className="ns-section"><div className="ns-container">
-        <div className="ns-section-head"><div><span className="ns-label">Popular destinations</span><h2>Explore where your plans could take you.</h2></div><Link href="/countries" className="ns-text-link">View all destinations →</Link></div>
-        <div className="ns-image-grid">
-          <Link href="/countries" className="ns-image-card"><img src="/assets/images/resource/countries-2.jpg" alt="Canada"/><div><h3>Canada</h3><p>Study, skilled work, and family pathways</p></div></Link>
-          <Link href="/countries" className="ns-image-card"><img src="/assets/images/resource/countries-3.jpg" alt="United Kingdom"/><div><h3>United Kingdom</h3><p>Study, work, and settlement routes</p></div></Link>
-          <Link href="/countries" className="ns-image-card"><img src="/assets/images/resource/countries-4.jpg" alt="Australia"/><div><h3>Australia</h3><p>Skilled migration and study options</p></div></Link>
+      <section className="imm-about" id="about">
+        <div className="imm-container imm-about__grid">
+          <div className="imm-about__image">
+            <img src="/assets/images/immigration/family-arrival.jpg" alt="A family beginning a new chapter in Canada" />
+            <span>Built around real people,<br />not generic checklists.</span>
+          </div>
+          <div className="imm-about__copy">
+            <span className="imm-eyebrow">Guidance that feels human</span>
+            <h2>Make informed decisions with less uncertainty.</h2>
+            <p>Every immigration journey involves more than forms. It can affect your family, education, career, finances, and future plans.</p>
+            <p>Our approach starts by understanding where you are now. From there, we help organise the facts, explain possible routes in plain language, and show you what a well-prepared next step can look like.</p>
+            <ul><li>Advice shaped around your circumstances</li><li>Clear document and evidence planning</li><li>Honest expectations at every stage</li></ul>
+          </div>
         </div>
-      </div></section>
+      </section>
 
-      <section className="ns-section ns-section--soft"><div className="ns-container">
-        <div className="ns-section-head"><div><span className="ns-label">Client experiences</span><h2>Support that feels clear from day one.</h2></div></div>
-        <div className="ns-testimonials"><article className="ns-quote"><blockquote>“The process stopped feeling overwhelming once every document had a clear purpose and deadline.”</blockquote><strong>Ada &amp; Tunde</strong><span>Family application</span></article><article className="ns-quote"><blockquote>“I appreciated the honest explanation of my options. There was no pressure and no unrealistic promise.”</blockquote><strong>Kelechi M.</strong><span>Study pathway</span></article><article className="ns-quote"><blockquote>“The final review caught details I would have missed and gave me much more confidence before submission.”</blockquote><strong>Michael O.</strong><span>Work permit application</span></article></div>
-      </div></section>
+      <section className="imm-process" id="process">
+        <div className="imm-container">
+          <div className="imm-heading imm-heading--compact">
+            <div><span className="imm-eyebrow">A simple first step</span><h2>Know where you stand.</h2></div>
+          </div>
+          <div className="imm-process__grid">
+            {steps.map(([number, title, copy]) => <article key={title}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
+          </div>
+        </div>
+      </section>
 
-      <section className="ns-section"><div className="ns-container"><div className="ns-cta"><div><h2>Your immigration plan deserves a clear first step.</h2><p>Book a confidential consultation and leave with a better understanding of your available options.</p></div><Link href="/contact" className="ns-button ns-button--blue">Book a consultation →</Link></div></div></section>
+      <section className="imm-assessment" id="assessment">
+        <div className="imm-container imm-assessment__inner">
+          <div>
+            <span className="imm-eyebrow">Ready when you are</span>
+            <h2>Your Canadian journey starts with the right questions.</h2>
+          </div>
+          <div>
+            <p>Begin with a short assessment of your goals and background. The interactive assessment experience will be available here.</p>
+            <button className="imm-button imm-button--light" type="button">Start Assessment <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </section>
     </SiteShell>
   );
 }

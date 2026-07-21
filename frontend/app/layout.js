@@ -1,11 +1,10 @@
 import "./site.css";
-import { urbanist } from "@/lib/font";
 
 export const metadata = {
-  title: "Sky Immigration | Clear pathways forward",
-  description: "A contemporary immigration consultancy website template.",
+  title: "Sky Immigration | Your Path to Canada",
+  description: "Clear immigration guidance for studying, working, visiting, reuniting with family, or building a future in Canada.",
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en" className={urbanist.variable}><body>{children}</body></html>;
+  return <html lang="en"><body>{children}</body></html>;
 }
