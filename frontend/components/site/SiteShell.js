@@ -1,4 +1,5 @@
 import Link from "next/link";
+import SectionAnimator from "./SectionAnimator";
 
 const navigation = [
   ["Services", "#services"],
@@ -19,6 +20,7 @@ export function SiteBrand() {
 export default function SiteShell({ children }) {
   return (
     <div className="imm-site">
+      <SectionAnimator />
       <header className="imm-header">
         <div className="imm-container imm-header__inner">
           <SiteBrand />
