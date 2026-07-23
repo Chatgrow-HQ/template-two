@@ -81,7 +81,7 @@ export default function Home() {
             peace of mind.
           </p>
           <div className="imm-hero__actions">
-            <a className="imm-button" href="#assessment" data-chatgrow-open="">
+            <a className="imm-button" href="#assessment" data-chatgrow-open>
               Request Assessment <span aria-hidden="true">→</span>
             </a>
             <a className="imm-text-link imm-text-link--light" href="#about">

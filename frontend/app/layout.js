@@ -3,7 +3,8 @@ import "./site.css";
 
 export const metadata = {
   title: "KAS Immigration Services | Canadian Immigration Consulting",
-  description: "Personalized Canadian immigration guidance for permanent residence, study, work, family sponsorship, visitors, and business immigration.",
+  description:
+    "Personalized Canadian immigration guidance for permanent residence, study, work, family sponsorship, visitors, and business immigration.",
   icons: {
     icon: "/kas-logo.jpg",
     shortcut: "/kas-logo.jpg",
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <Script
-          src="https://widget.chatgrow.co/chatgrow-widget.js"
+          src="https://staging.widget.chatgrow.co/chatgrow-widget.js"
           strategy="afterInteractive"
         />
       </body>
