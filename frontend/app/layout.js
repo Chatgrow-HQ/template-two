@@ -1,3 +1,4 @@
+import Script from "next/script";
 import "./site.css";
 
 export const metadata = {
@@ -22,5 +23,26 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body>{children}</body></html>;
+  return (
+    <html lang="en">
+      <body>
+        {children}
+        <Script id="chatgrow-config" strategy="beforeInteractive">
+          {`
+            window.Chatgrow = window.Chatgrow || function() {
+              (window.Chatgrow.q = window.Chatgrow.q || []).push(arguments);
+            };
+
+            window.chatgrowConfig = {
+              agentId: "cmpv4lxbu004tnz11x6yaa4fq",
+            };
+          `}
+        </Script>
+        <Script
+          src="https://widget.chatgrow.co/chatgrow-widget.js"
+          strategy="afterInteractive"
+        />
+      </body>
+    </html>
+  );
 }

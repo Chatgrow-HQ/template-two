@@ -16,7 +16,8 @@ const services = [
   {
     number: "03",
     title: "Visitors Visa",
-    intro: "Simplify the process of obtaining a Temporary Resident Visa or ETA.",
+    intro:
+      "Simplify the process of obtaining a Temporary Resident Visa or ETA.",
     copy: "A Canadian Visitor Visa, also known as a Temporary Resident Visa (TRV), allows individuals to visit Canada for tourism, family visits, or business conferences. Applicants generally need a valid passport, completed forms, proof of ties to their home country, and sufficient funds for their stay.",
   },
   {
@@ -34,13 +35,15 @@ const services = [
   {
     number: "06",
     title: "Provincial Nominee Programs",
-    intro: "Explore opportunities offered by Canada’s provinces and territories.",
+    intro:
+      "Explore opportunities offered by Canada’s provinces and territories.",
     copy: "The Provincial Nominee Program allows provinces and territories to nominate people with the skills, education, and work experience needed by their local economies. Each region operates unique streams and criteria tailored to its labour-market priorities.",
   },
   {
     number: "07",
     title: "Business Immigration",
-    intro: "Pathways for entrepreneurs, investors, and self-employed individuals.",
+    intro:
+      "Pathways for entrepreneurs, investors, and self-employed individuals.",
     copy: "Canadian Business Immigration programs offer routes for qualified entrepreneurs, investors, and self-employed people to establish or invest in Canadian businesses. These programs support economic growth, job creation, and innovation, and successful applicants may obtain permanent residence for themselves and their families.",
   },
 ];
@@ -58,15 +61,32 @@ export default function Home() {
   return (
     <SiteShell>
       <section className="imm-hero" id="home">
-        <img className="imm-hero__backdrop" src="/assets/images/immigration/canada-hero.jpg" alt="" />
+        <img
+          className="imm-hero__backdrop"
+          src="/assets/images/immigration/canada-hero.jpg"
+          alt=""
+        />
         <div className="imm-hero__shade" />
         <div className="imm-container imm-hero__inner">
-          <span className="imm-eyebrow imm-eyebrow--light">Your Canadian journey starts here</span>
-          <h1>Canadian Immigration<br /><em>&amp; Visa Consulting</em></h1>
-          <p>Embark on your Canadian immigration journey with confidence and peace of mind.</p>
+          <span className="imm-eyebrow imm-eyebrow--light">
+            Your Canadian journey starts here
+          </span>
+          <h1>
+            Canadian Immigration
+            <br />
+            <em>&amp; Visa Consulting</em>
+          </h1>
+          <p>
+            Embark on your Canadian immigration journey with confidence and
+            peace of mind.
+          </p>
           <div className="imm-hero__actions">
-            <a className="imm-button" href="#assessment">Request Assessment <span aria-hidden="true">→</span></a>
-            <a className="imm-text-link imm-text-link--light" href="#about">Discover our story</a>
+            <a className="imm-button" href="#assessment" data-chatgrow-open="">
+              Request Assessment <span aria-hidden="true">→</span>
+            </a>
+            <a className="imm-text-link imm-text-link--light" href="#about">
+              Discover our story
+            </a>
           </div>
           <div className="imm-hero__note">
             <span>Certified immigration guidance</span>
@@ -87,16 +107,31 @@ export default function Home() {
       <section className="imm-services" id="services">
         <div className="imm-container">
           <div className="imm-heading">
-            <div><span className="imm-eyebrow">Our services</span><h2>Clear guidance for every immigration pathway.</h2></div>
-            <p>From permanent residence to study, work, family, visitor, and business applications, we help you understand the process and prepare with confidence.</p>
+            <div>
+              <span className="imm-eyebrow">Our services</span>
+              <h2>Clear guidance for every immigration pathway.</h2>
+            </div>
+            <p>
+              From permanent residence to study, work, family, visitor, and
+              business applications, we help you understand the process and
+              prepare with confidence.
+            </p>
           </div>
           <div className="imm-service-grid">
             {services.map((service) => (
               <article className="imm-service" key={service.title}>
-                <div className="imm-service__top"><span>{service.number}</span><i aria-hidden="true">↗</i></div>
+                <div className="imm-service__top">
+                  <span>{service.number}</span>
+                  <i aria-hidden="true">↗</i>
+                </div>
                 <h3>{service.title}</h3>
                 <p className="imm-service__intro">{service.intro}</p>
-                <details open><summary>Read full details <b>⌄</b></summary><p>{service.copy}</p></details>
+                <details open>
+                  <summary>
+                    Read full details <b>⌄</b>
+                  </summary>
+                  <p>{service.copy}</p>
+                </details>
                 <a href="#assessment">Apply for {service.title} →</a>
               </article>
             ))}
@@ -107,16 +142,43 @@ export default function Home() {
       <section className="imm-about" id="about">
         <div className="imm-container imm-about__grid">
           <div className="imm-founder">
-            <img src="/assets/images/immigration/kemi-soetan.jpeg" alt="Kemi Soetan, Founder and CEO" />
-            <div><strong>Kemi Soetan</strong><span>Founder &amp; CEO</span></div>
+            <img
+              src="/assets/images/immigration/kemi-soetan.jpeg"
+              alt="Kemi Soetan, Founder and CEO"
+            />
+            <div>
+              <strong>Kemi Soetan</strong>
+              <span>Founder &amp; CEO</span>
+            </div>
           </div>
           <div className="imm-about__copy">
             <span className="imm-eyebrow">Our story</span>
             <h2>Experience shaped by a personal immigration journey.</h2>
-            <p>Our Founder &amp; CEO, Kemi Soetan, is a seasoned Certified Canadian Immigration Consultant with over a decade of experience facilitating the immigration process for individuals and families worldwide. Based in Toronto, Canada, Kemi has built a reputation for her expertise, professionalism, and dedication to helping clients navigate Canadian immigration law.</p>
-            <p>Kemi’s journey into immigration consultancy began with her own experience as an immigrant to Canada. Her passion for helping others achieve their dreams of settling in this diverse and welcoming country led her to pursue formal education and training in immigration law and procedures.</p>
-            <p>She earned her certification from the Immigration Consultants of Canada Regulatory Council (ICCRC), demonstrating her commitment to the highest standards of ethics and professionalism.</p>
-            <img className="imm-rcic" src="/assets/images/immigration/rcic-logo.png" alt="Registered Canadian Immigration Consultant" />
+            <p>
+              Our Founder &amp; CEO, Kemi Soetan, is a seasoned Certified
+              Canadian Immigration Consultant with over a decade of experience
+              facilitating the immigration process for individuals and families
+              worldwide. Based in Toronto, Canada, Kemi has built a reputation
+              for her expertise, professionalism, and dedication to helping
+              clients navigate Canadian immigration law.
+            </p>
+            <p>
+              Kemi’s journey into immigration consultancy began with her own
+              experience as an immigrant to Canada. Her passion for helping
+              others achieve their dreams of settling in this diverse and
+              welcoming country led her to pursue formal education and training
+              in immigration law and procedures.
+            </p>
+            <p>
+              She earned her certification from the Immigration Consultants of
+              Canada Regulatory Council (ICCRC), demonstrating her commitment to
+              the highest standards of ethics and professionalism.
+            </p>
+            <img
+              className="imm-rcic"
+              src="/assets/images/immigration/rcic-logo.png"
+              alt="Registered Canadian Immigration Consultant"
+            />
           </div>
         </div>
       </section>
@@ -124,15 +186,54 @@ export default function Home() {
       <section className="imm-values">
         <div className="imm-container imm-values__grid">
           <div>
-            <span className="imm-eyebrow imm-eyebrow--light">Driven by values</span>
+            <span className="imm-eyebrow imm-eyebrow--light">
+              Driven by values
+            </span>
             <h2>Professional service, with a personal touch.</h2>
-            <p>Our mission is to simplify the immigration process and empower our clients to make informed decisions about their future in Canada. We believe in transparency, integrity, and professionalism in everything we do.</p>
-            <p>Whether you are seeking to reunite with family, pursue educational opportunities, explore employment prospects, or establish permanent residence, we are here to guide you every step of the way.</p>
+            <p>
+              Our mission is to simplify the immigration process and empower our
+              clients to make informed decisions about their future in Canada.
+              We believe in transparency, integrity, and professionalism in
+              everything we do.
+            </p>
+            <p>
+              Whether you are seeking to reunite with family, pursue educational
+              opportunities, explore employment prospects, or establish
+              permanent residence, we are here to guide you every step of the
+              way.
+            </p>
           </div>
           <div className="imm-value-list">
-            <article><span>✓</span><div><h3>Expertise</h3><p>In-depth knowledge of Canadian immigration laws, policies, and procedures for accurate and reliable guidance.</p></div></article>
-            <article><span>✓</span><div><h3>Personalized Approach</h3><p>We listen to your needs and tailor our services to your specific requirements.</p></div></article>
-            <article><span>✓</span><div><h3>Accessibility</h3><p>Virtual consultations, email, and phone support for clients in Canada and abroad.</p></div></article>
+            <article>
+              <span>✓</span>
+              <div>
+                <h3>Expertise</h3>
+                <p>
+                  In-depth knowledge of Canadian immigration laws, policies, and
+                  procedures for accurate and reliable guidance.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>✓</span>
+              <div>
+                <h3>Personalized Approach</h3>
+                <p>
+                  We listen to your needs and tailor our services to your
+                  specific requirements.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span>✓</span>
+              <div>
+                <h3>Accessibility</h3>
+                <p>
+                  Virtual consultations, email, and phone support for clients in
+                  Canada and abroad.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -140,8 +241,15 @@ export default function Home() {
       <section className="imm-consultations" id="consultations">
         <div className="imm-container">
           <div className="imm-heading">
-            <div><span className="imm-eyebrow">Consultations</span><h2>Ready to discuss your immigration needs?</h2></div>
-            <p>Select the right consultation service, complete the immigration questionnaire and payment, then receive a comprehensive assessment to determine your best immigration pathway.</p>
+            <div>
+              <span className="imm-eyebrow">Consultations</span>
+              <h2>Ready to discuss your immigration needs?</h2>
+            </div>
+            <p>
+              Select the right consultation service, complete the immigration
+              questionnaire and payment, then receive a comprehensive assessment
+              to determine your best immigration pathway.
+            </p>
           </div>
           <div className="imm-price-grid">
             {consultations.map(([title, price]) => (
@@ -158,12 +266,24 @@ export default function Home() {
       <section className="imm-assessment" id="assessment">
         <div className="imm-container imm-assessment__inner">
           <div>
-            <span className="imm-eyebrow imm-eyebrow--light">Your next step</span>
+            <span className="imm-eyebrow imm-eyebrow--light">
+              Your next step
+            </span>
             <h2>Request your immigration assessment.</h2>
-            <p>Tell us where you are in your journey and what you hope to achieve. We’ll review your details and help identify the Canadian immigration pathways worth exploring.</p>
-            <ul><li>✓ A clear first look at your goals</li><li>✓ Guidance on a suitable consultation</li><li>✓ A personalised next-step conversation</li></ul>
+            <p>
+              Tell us where you are in your journey and what you hope to
+              achieve. We’ll review your details and help identify the Canadian
+              immigration pathways worth exploring.
+            </p>
+            <ul>
+              <li>✓ A clear first look at your goals</li>
+              <li>✓ Guidance on a suitable consultation</li>
+              <li>✓ A personalised next-step conversation</li>
+            </ul>
           </div>
-          <a className="imm-button imm-button--light" href="mailto:info@kasimmigrationservices.com?subject=Immigration assessment request">Request assessment →</a>
+          <button className="imm-button imm-button--light" data-chatgrow-open>
+            Request assessment →
+          </button>
         </div>
       </section>
 
@@ -172,12 +292,25 @@ export default function Home() {
           <div>
             <span className="imm-eyebrow">Get in touch</span>
             <h2>Let’s turn your Canadian aspirations into a clear plan.</h2>
-            <p>Contact KAS Immigration Services today to schedule a consultation and take the first step towards realizing your aspirations in Canada.</p>
+            <p>
+              Contact KAS Immigration Services today to schedule a consultation
+              and take the first step towards realizing your aspirations in
+              Canada.
+            </p>
           </div>
           <div className="imm-contact__list">
-            <a href="tel:+12895210142"><small>Call us · Monday–Friday</small><strong>+1 289-521-0142</strong></a>
-            <a href="mailto:info@kasimmigrationservices.com"><small>Email</small><strong>info@kasimmigrationservices.com</strong></a>
-            <a href="https://wa.me/16479966546"><small>WhatsApp</small><strong>+1 647-996-6546</strong></a>
+            <a href="tel:+12895210142">
+              <small>Call us · Monday–Friday</small>
+              <strong>+1 289-521-0142</strong>
+            </a>
+            <a href="mailto:info@kasimmigrationservices.com">
+              <small>Email</small>
+              <strong>info@kasimmigrationservices.com</strong>
+            </a>
+            <a href="https://wa.me/16479966546">
+              <small>WhatsApp</small>
+              <strong>+1 647-996-6546</strong>
+            </a>
           </div>
         </div>
       </section>
